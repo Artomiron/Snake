@@ -10,12 +10,19 @@ namespace Snake
     {
         public int x;
         public int y;
-        public char sym;
+        public char sum;
+
+        public Point(int x, int y, char sum)
+        {
+            this.x = x;
+            this.y = y;
+            this.sum = sum;  
+        }
 
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
-            Console.Write(sym);
+            Console.Write(sum);
         }
     }
 }
