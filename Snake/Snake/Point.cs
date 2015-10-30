@@ -12,6 +12,8 @@ namespace Snake
         public int y;
         public char sum;
 
+        public Point() { }
+
         public Point(int x, int y, char sum)
         {
             this.x = x;
