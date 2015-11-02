@@ -21,7 +21,7 @@ namespace Snake
             this.sum = sum;  
         }
 
-        public void Draw()
+        public void pointDraw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sum);
