@@ -22,7 +22,8 @@ namespace Snake
             HorizontalLine line = new HorizontalLine(12, 17, 6, '+');
             line.lineDraw();
 
-
+            VerticalLine firstVline = new VerticalLine(7, 19, 12, '@');
+            firstVline.Draw();
 
             #region представление точек без ООП
             //Console.WriteLine("Let's start programing Snake!!!");
