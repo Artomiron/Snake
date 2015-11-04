@@ -8,11 +8,11 @@ namespace Snake
 {
     class Figure
     {
-        protected List<Point> line;
+        protected List<Point> pList;
 
         public void Draw()
         {
-            foreach (Point t in line)
+            foreach (Point t in pList)
             {
                 t.pointDraw();
 
