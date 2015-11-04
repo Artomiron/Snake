@@ -4,32 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Snake
+namespace Snake 
 {
-    class VerticalLine
+    class VerticalLine : Figure
     {
-        List<Point> vLine;
-
         public VerticalLine(){ }
 
         public VerticalLine(int yUp, int yDown, int x, char symbol)
         {
-            vLine = new List<Point>();
+            line = new List<Point>();
             for(int y = yUp; y < yDown; y++)
             {
                 Point p = new Point(x, y, symbol);
-                vLine.Add(p);
+                line.Add(p);
             }
         }
-
-        public void Draw()
-        {
-            foreach (Point t in vLine)
-            {
-                t.pointDraw();
- 
-            }
-        }
-
     }
 }

@@ -20,7 +20,7 @@ namespace Snake
             p3.pointDraw();
 
             HorizontalLine line = new HorizontalLine(12, 17, 6, '+');
-            line.lineDraw();
+            line.Draw();
 
             VerticalLine firstVline = new VerticalLine(7, 19, 12, '@');
             firstVline.Draw();
