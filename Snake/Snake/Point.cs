@@ -53,5 +53,11 @@ namespace Snake
         {
             return x + ", " + y + ", " + sum;
         }
+
+        public void Clear()
+        {
+            sum = ' ';
+            pointDraw();
+        }
     }
 }

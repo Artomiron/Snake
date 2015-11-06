@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Snake
 {
@@ -25,20 +26,21 @@ namespace Snake
             Point p = new Point(4, 5, '*');
             Shake mySnake = new Shake(p, 5, Direction.RIGHT);
             mySnake.Draw();
+            mySnake.Move();
+            Thread.Sleep(300);
+            mySnake.Move();
+            Thread.Sleep(300);
+            mySnake.Move();
+            Thread.Sleep(300);
+            mySnake.Move();
+            Thread.Sleep(300);
+            mySnake.Move();
+            Thread.Sleep(300);
+            mySnake.Move();
+            Thread.Sleep(300);
+            mySnake.Move();
 
 
-
-            #region представление точек без ООП
-            //Console.WriteLine("Let's start programing Snake!!!");
-            /*int x1 = 1;
-            int y1 = 3;
-            char sym1 = '*';
-            Draw(x1, y1, sym1);
-            int x2 = 4;
-            int y2 = 5;
-            char sym2 = '*';
-            Draw(x2, y2, sym2);*/
-            #endregion
 
             Console.ReadLine();
         }

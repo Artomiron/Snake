@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 namespace Snake
 {
     class Shake : Figure
-    {        
+    {
+        Direction direction;
         public Shake(Point tail, int lenght, Direction direction)
         {
+            this.direction = direction;
             pList = new List<Point>();
             for(int i = 0; i < lenght; i++)
             {
@@ -18,6 +20,25 @@ namespace Snake
                 pList.Add(p);
             }
  
+        }
+
+        internal void Move()
+        {
+            Point tail = pList.First();
+            pList.Remove(tail);
+            Point head = GetNextPoint();
+            pList.Add(head);
+
+            tail.Clear();
+            head.pointDraw();
+        }
+
+        public Point GetNextPoint()
+        {
+            Point head = pList.Last();
+            Point nextPoint = new Point(head);
+            nextPoint.Move(1, direction);
+            return nextPoint;
         }
     }
 }
